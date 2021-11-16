@@ -1,0 +1,52 @@
+.nav{
+    background-color:#150050;
+   
+    padding:14px;
+    
+    
+  }
+ .link{
+   display: inline-block;
+   text-decoration: none;
+   color:#ffffff;
+  
+   padding-right: 20px;
+   
+ }
+ .log{
+  margin-left: 7px;
+  color:#ffffff;
+  text-decoration: none;
+  float: right;
+  padding-right: 10px;
+}
+.sign{
+  margin-left:7px;
+  color:#ffffff;
+  text-decoration: none;
+  float: right;
+  padding-right: 10px;
+  
+}
+.logo{
+  
+  color:#ffffff;
+  padding-right:950px;
+ 
+  
+  
+}
+.about{
+  color:#ffffff;
+  text-decoration: none;
+  float: right;
+  padding-right: 10px;
+}
+.contac{
+  color:#ffffff;
+  text-decoration: none;
+  float: right;
+  padding-right: 10px;
+  
+}
+
