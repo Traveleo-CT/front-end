@@ -1,52 +1,162 @@
+
+.nav_div {
+  /* background-color: #150050; */
+  background-color: rgb(17, 27, 51);
+
+  padding: 14px;
+  top: 0;
+  left: 0;
+
+-webkit-box-shadow: 0 0px 20px  black;
+-moz-box-shadow: 0 0px 20px black;
+ box-shadow: 0 0px 20px  black;
+  width: 100%;
+  position: absolute;
+  font-size: 20px;
+}
 .nav{
-    background-color:#150050;
-   
-    padding:14px;
-    
-    
-  }
- .link{
-   display: inline-block;
-   text-decoration: none;
-   color:#ffffff;
-  
-   padding-right: 20px;
-   
- }
- .log{
-  margin-left: 7px;
-  color:#ffffff;
-  text-decoration: none;
-  float: right;
-  padding-right: 10px;
-}
-.sign{
-  margin-left:7px;
-  color:#ffffff;
-  text-decoration: none;
-  float: right;
-  padding-right: 10px;
-  
-}
-.logo{
-  
-  color:#ffffff;
-  padding-right:950px;
+  padding-right: 25px;
  
-  
-  
-}
-.about{
-  color:#ffffff;
-  text-decoration: none;
-  float: right;
-  padding-right: 10px;
-}
-.contac{
-  color:#ffffff;
-  text-decoration: none;
-  float: right;
-  padding-right: 10px;
-  
 }
 
+
+.log {
+  color: #ffffff;
+  text-decoration: none;
+  float: right;
+  padding-right: 12px;
+  font-size: 14px;
+  text-align: center;
+  justify-content: center;
+  line-height:50px;
+ 
+
+}
+.log:hover{
+font-weight: bold;
+  color:#FF8882;
+}
+.sign {
+  color: #ffffff;
+  text-decoration: none;
+  float: right;
+  padding-right: 12px;
+  font-size: 14px;
+  text-align: center;
+  justify-content: center;
+  line-height:50px;
+ 
+}
+.sign:hover{
+  font-weight: bold;
+  color:#FF8882;
+}
+
+.about {
+  color: #ffffff;
+  text-decoration: none;
+  float: right;
+  padding-right: 12px;
+  font-size: 14px;
+  text-align: center;
+  justify-content: center;
+  line-height:50px;
+ 
+ 
+}
+.about:hover{
+  font-weight: bold;
+  color:#FF8882;
+}
+.contac {
+  color: #ffffff;
+  text-decoration: none;
+  float: right;
+  padding-right: 12px;
+  font-size: 14px;
+  text-align: center;
+  justify-content: center;
+  line-height:50px;
+ 
+  
+}
+.contac:hover{
+  font-weight: bold;
+  color:#FF8882;
+}
+.logout_nav{
+  color: #ffffff;
+  text-decoration: none;
+  float: right;
+  padding-right: 12px;
+  font-size: 14px;
+  text-align: center;
+  justify-content: center;
+  line-height:50px;
+ 
+}
+.logout_nav:hover{
+  font-weight: bold;
+  color:#FF8882;
+}
+.table_nav{
+  color: #ffffff;
+  text-decoration: none;
+  float: right;
+  padding-right: 12px;
+  font-size: 14px;
+  text-align: center;
+  justify-content: center;
+  line-height:50px;
+ 
+}
+.table_nav:hover{
+  font-weight: bold;
+  color:#FF8882;
+}
+.myBooking_nav{
+  color: #ffffff;
+  text-decoration: none;
+  float: right;
+  padding-right: 12px;
+  font-size: 14px;
+  text-align: center;
+  justify-content: center;
+  line-height:50px;
+ 
+}
+.myBooking_nav:hover{
+  font-weight: bold;
+  color:#FF8882;
+}
+.home_nav{
+  color: #ffffff;
+  text-decoration: none;
+  float: right;
+  padding-right: 12px;
+  font-size: 14px;
+  text-align: center;
+  justify-content: center;
+  line-height:50px;
+ 
+}
+.home_nav:hover{
+  font-weight: bold;
+  color:#FF8882;
+}
+.main-nav{
+  color: #ffffff;
+  text-decoration: none;
+  float: right;
+  padding-right: 12px;
+  font-size: 14px;
+  text-align: center;
+  justify-content: center;
+  line-height:50px;
+ 
+
+}
+.main-nav:hover{
+  font-weight: bold;
+  color:#FF8882;
+}

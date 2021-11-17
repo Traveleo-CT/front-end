@@ -1,0 +1,11 @@
+.sidebar_div {
+  position: absolute;
+  top: 265vh;
+  right: 10px;
+  width: 30vw;
+  height: 140vh;
+  background-color:#C2DAEC;
+  border-radius:10px;
+  
+}
+ /* new */

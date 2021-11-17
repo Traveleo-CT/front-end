@@ -1,5 +1,8 @@
 import React from "react";
 import "./footer.css";
+import { GiPlanePilot } from "react-icons/gi";
+import { Link, useRouteMatch } from "react-router-dom";
+
 import {
   faFacebookF,
   faTwitterSquare,
@@ -10,8 +13,10 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Footer = () => {
+  let { path, url } = useRouteMatch();
+
   return (
-    <div className="footer">
+    <div className="footer_div">
       <div className="footer_icons">
         <FontAwesomeIcon style={{ fontSize: "3vw" }} icon={faFacebookF} />
         <FontAwesomeIcon style={{ fontSize: "3vw" }} icon={faTwitterSquare} />
@@ -21,11 +26,10 @@ const Footer = () => {
       </div>
       <br />
       <br />
-
       <div className="footer_links">
         <ul>
           <li>
-            <a href="#">Contact Us</a>
+            <Link to={`/contact`}>Contact Us</Link>
           </li>
           <li>
             <a href="#">Jobs</a>
@@ -54,7 +58,12 @@ const Footer = () => {
           </li>
         </ul>
       </div>
-      <h1>trevaleo</h1>
+      <h1 style={{ fontSize: "20px" }}>
+        <span style={{ color: "rgb(19,145,210)" }}>Tre</span>
+        <span style={{ color: "rgb(252,158,21)" }}>val</span>
+        <GiPlanePilot style={{ fontSize: "3vw" }} />
+        <span style={{ color: "rgb(227,64,61)" }}>eo</span>
+      </h1>
       <h6>Copyright 2021 trevaleo | All rights reserved.</h6>
     </div>
   );

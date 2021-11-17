@@ -1,12 +1,22 @@
-.footer {
-  position: relative;
-  bottom: 0;
-  left: 0;
-  width: 100vw;
+
+.footer_div {
+  font-family: Arial, Helvetica, sans-serif !important;
+  margin: auto !important;
+  position: relative !important;
+  bottom: 0 !important;
+  /* width: 100% !important; */
+  margin:0px auto;
+        min-width:1370px;
+        max-width:1370px;
   height: 50vh;
   background-color: rgb(17, 27, 51);
   color: white;
-  text-align: center;
+  text-align: center !important;
+  padding:5%;
+-webkit-box-shadow: 0 0px 20px  black;
+-moz-box-shadow: 0 0px 20px black;
+ box-shadow: 0 0px 20px  black;  
+  
 }
 .footer_links {
   display: flex;
@@ -19,9 +29,12 @@
   color: aliceblue;
 }
 a:link {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif !important;
   color: aliceblue;
   text-decoration: none;
+}
+a {
+  font-size: 0.8vw;
 }
 .footer_icons {
   display: flex;
@@ -31,3 +44,4 @@ a:link {
   justify-content: center;
   padding-top: 5%;
 }
+

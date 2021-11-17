@@ -1,16 +1,13 @@
 import React from "react";
 import DataTable from "react-data-table-component";
 import { useHistory, useRouteMatch } from "react-router-dom";
-import "../ui/Table.css";
 import axios from "axios";
 import swal from "sweetalert";
+import "./Table.css"
+
+
 
 const columns = [
-  {
-    name: "_id",
-    selector: (row) => row._id,
-    sortable: true,
-  },
   {
     name: "destination",
     selector: (row) => row.destination,
@@ -32,22 +29,23 @@ const columns = [
     sortable: true,
   },
   {
-    name: "price",
-    selector: (row) => row.price,
+    name: "Total Price",
+    selector: (row) => `${row.totalPrice} $`,
     sortable: true,
   },
 ];
 
-function Table({ value, state }) {
-  let { path, url } = useRouteMatch();
+
+function Table({ value, state, adult, setBook }) {
+  let { path } = useRouteMatch();
   const flight = value;
-  //console.log(flight)
-  const [adults, setadults] = React.useState([]);
-  const [token, settoken] = React.useState([]);
+
+
   const history = useHistory();
   const [selectedRows, setSelectedRows] = React.useState([]);
   const handleRowSelected = React.useCallback((state) => {
     setSelectedRows(state.selectedRows);
+
   }, []);
   const contextActions = React.useMemo(() => {
     const bookHandler = async () => {
@@ -58,24 +56,29 @@ function Table({ value, state }) {
             (r) => r.destination
           )}?`,
           // eslint-disable-next-line no-dupe-keys
-          title: "Enter the Number of Adults",
+
           icon: "warning",
-          content: "input",
+
           buttons: true,
           dangerMode: false,
-        }).then((willtrue) => {
-          if (willtrue) {
-            setadults(parseInt(willtrue));
-            settoken(state.token);
+
+            
+
+        }).then((result) => {
+          if (result) {
+            setBook(selectedRows)
+
+
+
             axios
               .post(
-                "http://localhost:5000/flightBooking",
+                "http://localhost:5000/flightBooking/",
                 {
-                  flightId: selectedRows._id,
-                  adults: adults,
-                  userId: "613a4d4cfd1dd74d24f77969",
+                  flightId: selectedRows[0].bookingId,
+                  adults: adult,
                 },
-                { headers: { Authorization: `Bearer ${token}` } }
+                { headers: { Authorization: `Bearer ${state.token}` } }
+
               )
               .then((reslut) => {
                 console.log(reslut.data);
@@ -83,7 +86,6 @@ function Table({ value, state }) {
               .catch((err) => {
                 console.log(err);
               });
-            console.log(selectedRows);
 
             swal("thanks! Your book has been saved!", {
               icon: "success",
@@ -97,19 +99,15 @@ function Table({ value, state }) {
       }
     };
     return (
-      <div className="table">
-        <button
-          key="book"
-          onClick={bookHandler}
-          style={{ backgroundColor: "rgb(227,242,253)" }}
-        >
+      <div>
+        <button key="book" onClick={bookHandler}>
           BOOK
         </button>
       </div>
     );
-  }, [selectedRows]);
+  }, [adult, history, path, selectedRows, setBook, state.token]);
   return (
-    <div className="">
+    <div>
       <DataTable
         title="FlightBooking"
         columns={columns}

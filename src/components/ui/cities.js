@@ -1,7 +1,16 @@
 import React from "react";
 import { Carousel } from "react-carousel-minimal";
+import "./cities.css";
+import { FaSearchLocation } from "react-icons/fa";
+import { GiPlanePilot } from "react-icons/gi";
+import { FaPlaneDeparture } from "react-icons/fa";
 
+import { Link, useRouteMatch } from "react-router-dom";
+
+//new
+// FaSearchLocation
 function Cities() {
+  const { path, url } = useRouteMatch();
   const data_1 = [
     {
       image:
@@ -9,7 +18,6 @@ function Cities() {
       caption: `<div>
                   San Francisco
                   <br/>
-                  Next line
                 </div>`,
     },
     {
@@ -104,9 +112,57 @@ function Cities() {
     fontWeight: "bold",
   };
   return (
-    <div className="App1">
+    <div className="cities_div">
       <div style={{ textAlign: "center" }}>
-        <h1>Explore The World !</h1>
+        <div style={{ padding: "40px" }}>
+          <div className="rot_div right_rot">
+            <img
+              src="https://cdn.pixabay.com/photo/2017/12/15/13/51/polynesia-3021072_960_720.jpg"
+              alt="Pulpit rock"
+              width="284"
+              height="213"
+            />
+            <p className="caption" style={{ color: "#143B6B" }}>
+              More Destinations
+            </p>
+          </div>
+
+          <div className="rot_div left_rot">
+            <img
+              src="https://cdn.pixabay.com/photo/2016/02/19/11/48/box-1209969_960_720.jpg"
+              alt="Monterosso al Mare"
+              width="284"
+              height="213"
+            />
+            <p className="caption" style={{ color: "#143B6B" }}>
+              More Memories
+            </p>
+          </div>
+        </div>
+
+        <p style={{ fontSize: "5vw", fontFamily: "Arial" }}>
+          Expl{" "}
+          <FaSearchLocation
+            style={{ fontSize: "7vw", color: "rgb(19,145,210)" }}
+          />{" "}
+          re Memories With{" "}
+        </p>
+        <div className="cities_logo">
+          <p style={{ fontSize: "5vw" }}>
+            <span style={{ color: "rgb(19,145,210)" }}> Tre</span>
+            <span style={{ color: "rgb(252,158,21)" }}>val</span>
+            <GiPlanePilot style={{ fontSize: "200%", color: "white" }} />
+            <span style={{ color: "rgb(227,64,61)" }}>eo</span>
+          </p>
+          <Link style={{ fontSize: "150%", color: "white" }} to={`/login`}>
+            {" "}
+            BOOK HERE !{" "}
+            <FaPlaneDeparture
+              className="cities_book_logo"
+              style={{ fontSize: "5vw", color: "rgb(19,145,210)" }}
+            />{" "}
+          </Link>
+        </div>
         <div
           style={{
             padding: "0 20px",
@@ -126,19 +182,20 @@ function Cities() {
             dots={true}
             pauseIconColor="white"
             pauseIconSize="40px"
-            slideBackgroundColor="darkgrey"
+            // slideBackgroundColor="darkgrey"
             slideImageFit="cover"
             thumbnails={true}
-            thumbnailWidth="100px"
+            thumbnailWidth="140px"
             style={{
               textAlign: "center",
-              maxWidth: "850px",
+              // maxWidth: "10 0vw",
               maxHeight: "500px",
               margin: "40px auto",
             }}
           />
         </div>
       </div>
+      <div className="cities_line"></div>
     </div>
   );
 }
