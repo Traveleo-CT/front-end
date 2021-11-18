@@ -66,11 +66,11 @@ const App = () => {
             <Route path={`/contact`} component={Contact} />
             <Route path={`/about`} component={About} />
             <Route
-              path={`${path}/home`}
+              path={`/home`}
               render={() => <Home setvalue={setflights} setadult={setAdult} />}
             />
             <Route
-              path={`${path}/Table`}
+              path={`/Table`}
               render={() => (
                 <Table
                   value={flights}
@@ -86,7 +86,6 @@ const App = () => {
             <Route exact path={"/"} component={SideBar}></Route>
           </userContext.Provider>
         </Switch>
-
 
         <Footer />
       </div>
