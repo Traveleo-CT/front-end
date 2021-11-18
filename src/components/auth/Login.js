@@ -6,7 +6,7 @@ import "../auth/Login.css";
 import { userSign } from "../../App";
 import { GiPlanePilot } from "react-icons/gi";
 import { CgCloseR } from "react-icons/cg";
-import FacebookLogin from "react-facebook-login";
+import LoginFacebook from "../facebook/FacebookLogin";
 
 const Login = () => {
   const newSign = useContext(userSign);
@@ -17,12 +17,6 @@ const Login = () => {
   const newUser = useContext(userContext);
   const [err, setErr] = useState();
 
-  const responseFacebook = (response) => {
-    console.log("responseFacebook", response);
-    console.log("response.name", response.name);
-
-    history.push("/home");
-  };
 
   return (
     <div className="main_login">
@@ -65,7 +59,6 @@ const Login = () => {
           defaultValue={newSign.email}
           onChange={(e) => {
             setEmail(e.target.value);
-            console.log(e.target.value);
           }}
         />
         <input
@@ -75,21 +68,17 @@ const Login = () => {
           className="password-login"
           onChange={(e) => {
             setPassword(e.target.value);
-            console.log(e.target.value);
           }}
         />
         <button
           className="btn-login"
           onClick={() => {
-            console.log(email, password);
             axios
               .post("http://localhost:5000/login", { email, password })
               .then((result) => {
                 if (!result.data.token) {
                   setErr(result.data);
                 } else {
-                  console.log(result);
-                  console.log(result.data.token);
                   localStorage.setItem(`info`, result.data.token);
                   newUser.setToken(result.data.token);
                   history.push(`/home`);
@@ -105,29 +94,11 @@ const Login = () => {
         <script
           async
           defer
-          crossorigin="anonymous"
-          src="https://connect.facebook.net/ar_AR/sdk.js#xfbml=1&version=v12.0&appId=214231877501977&autoLogAppEvents=1"
+          crossOrigin="anonymous"
+          src="https://connect.facebook.net/ar_AR/sdk.js#xfbml=1&version=v12.0&appId=300480835180286&autoLogAppEvents=1"
           nonce="Zu8VEK3r"
         ></script>
-
-        <div
-          class="fb-login-button"
-          data-width=""
-          data-size="large"
-          data-button-type="continue_with"
-          data-layout="rounded"
-          data-auto-logout-link="true"
-          data-use-continue-as="true"
-        >
-        <FacebookLogin
-          appId="300480835180286"
-          autoLoad={true}
-          fields="name,email"
-          // onClick={}
-          callback={responseFacebook}
-        />
-  
-        </div>
+        <LoginFacebook />
         {err}
       </div>
       <br />

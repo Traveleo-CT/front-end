@@ -1,11 +1,14 @@
 import React, { useState, useContext } from "react";
 import axios from "axios";
 import "../auth/SignUp.css";
-import Modal from "../Modal/Modal";
+import Modal from "../modal/Modal";
 import { userSign } from "../../App";
 import { GiPlanePilot } from "react-icons/gi";
 import { useHistory } from "react-router-dom";
 import { CgCloseR } from "react-icons/cg";
+import SignUpFacebook from "../facebook/FacebookSignUp"
+
+
 const SignUp = () => {
   const history = useHistory();
   const [firstName, setFirstName] = useState();
@@ -123,9 +126,13 @@ const SignUp = () => {
             >
               signUp
             </button>
+            <SignUpFacebook/>
             {status}
           </div>
           <br />
+        
+         
+
         </div>
       ) : (
         <Modal />

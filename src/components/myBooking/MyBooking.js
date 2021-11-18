@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./MyBooking.css";
-
+import  Payment from "../payment/Payment";
 export const MyBooking = ({ book, state }) => {
   const [adults, setAdults] = useState();
   const [results, setresults] = useState();
@@ -81,6 +81,7 @@ export const MyBooking = ({ book, state }) => {
                   <button className="btn1" onClick={() => deleted(element._id)}>
                     Delete
                   </button>
+                  <Payment amount={element.flightId.price*element.adults}/>
                 </div>
                 <div className="status">
                   <div className="stat">

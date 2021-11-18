@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../Modal/Modal.css";
+import "./Modal.css";
 import {useHistory,useRouteMatch} from "react-router-dom";
 import { GiPlanePilot } from "react-icons/gi";
 import {CgCloseR}from "react-icons/cg";
