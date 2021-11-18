@@ -6,6 +6,9 @@ import { userSign } from "../../App";
 import { GiPlanePilot } from "react-icons/gi";
 import { useHistory } from "react-router-dom";
 import { CgCloseR } from "react-icons/cg";
+import SignUpFacebook from "../facebook/FacebookSignUp"
+
+
 const SignUp = () => {
   const history = useHistory();
   const [firstName, setFirstName] = useState();
@@ -123,9 +126,13 @@ const SignUp = () => {
             >
               signUp
             </button>
+            <SignUpFacebook/>
             {status}
           </div>
           <br />
+        
+         
+
         </div>
       ) : (
         <Modal />
