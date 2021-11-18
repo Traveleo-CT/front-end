@@ -3,9 +3,7 @@ import DataTable from "react-data-table-component";
 import { useHistory, useRouteMatch } from "react-router-dom";
 import axios from "axios";
 import swal from "sweetalert";
-import "./Table.css"
-
-
+import "./Table.css";
 
 const columns = [
   {
@@ -35,17 +33,14 @@ const columns = [
   },
 ];
 
-
 function Table({ value, state, adult, setBook }) {
   let { path } = useRouteMatch();
   const flight = value;
-
 
   const history = useHistory();
   const [selectedRows, setSelectedRows] = React.useState([]);
   const handleRowSelected = React.useCallback((state) => {
     setSelectedRows(state.selectedRows);
-
   }, []);
   const contextActions = React.useMemo(() => {
     const bookHandler = async () => {
@@ -61,14 +56,9 @@ function Table({ value, state, adult, setBook }) {
 
           buttons: true,
           dangerMode: false,
-
-            
-
         }).then((result) => {
           if (result) {
-            setBook(selectedRows)
-
-
+            setBook(selectedRows);
 
             axios
               .post(
@@ -78,7 +68,6 @@ function Table({ value, state, adult, setBook }) {
                   adults: adult,
                 },
                 { headers: { Authorization: `Bearer ${state.token}` } }
-
               )
               .then((reslut) => {
                 console.log(reslut.data);
@@ -100,7 +89,7 @@ function Table({ value, state, adult, setBook }) {
     };
     return (
       <div>
-        <button key="book" onClick={bookHandler}>
+        <button className="btnn" key="book" onClick={bookHandler}>
           BOOK
         </button>
       </div>
