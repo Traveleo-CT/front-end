@@ -1,24 +1,19 @@
-
-.nav_div {
-  /* background-color: #150050; */
+/* .nav_div {
   background-color: rgb(17, 27, 51);
 
-  padding: 14px;
   top: 0;
   left: 0;
 
--webkit-box-shadow: 0 0px 20px  black;
--moz-box-shadow: 0 0px 20px black;
- box-shadow: 0 0px 20px  black;
+  -webkit-box-shadow: 0 0px 20px black;
+  -moz-box-shadow: 0 0px 20px black;
+  box-shadow: 0 0px 20px black;
   width: 100%;
   position: absolute;
   font-size: 20px;
 }
-.nav{
+.nav {
   padding-right: 25px;
- 
 }
-
 
 .log {
   color: #ffffff;
@@ -28,13 +23,11 @@
   font-size: 14px;
   text-align: center;
   justify-content: center;
-  line-height:50px;
- 
-
+  line-height: 50px;
 }
-.log:hover{
-font-weight: bold;
-  color:#FF8882;
+.log:hover {
+  font-weight: bold;
+  color: #ff8882;
 }
 .sign {
   color: #ffffff;
@@ -44,12 +37,11 @@ font-weight: bold;
   font-size: 14px;
   text-align: center;
   justify-content: center;
-  line-height:50px;
- 
+  line-height: 50px;
 }
-.sign:hover{
+.sign:hover {
   font-weight: bold;
-  color:#FF8882;
+  color: #ff8882;
 }
 
 .about {
@@ -60,13 +52,11 @@ font-weight: bold;
   font-size: 14px;
   text-align: center;
   justify-content: center;
-  line-height:50px;
- 
- 
+  line-height: 50px;
 }
-.about:hover{
+.about:hover {
   font-weight: bold;
-  color:#FF8882;
+  color: #ff8882;
 }
 .contac {
   color: #ffffff;
@@ -76,15 +66,13 @@ font-weight: bold;
   font-size: 14px;
   text-align: center;
   justify-content: center;
-  line-height:50px;
- 
-  
+  line-height: 50px;
 }
-.contac:hover{
+.contac:hover {
   font-weight: bold;
-  color:#FF8882;
+  color: #ff8882;
 }
-.logout_nav{
+.logout_nav {
   color: #ffffff;
   text-decoration: none;
   float: right;
@@ -92,14 +80,13 @@ font-weight: bold;
   font-size: 14px;
   text-align: center;
   justify-content: center;
-  line-height:50px;
- 
+  line-height: 50px;
 }
-.logout_nav:hover{
+.logout_nav:hover {
   font-weight: bold;
-  color:#FF8882;
+  color: #ff8882;
 }
-.table_nav{
+.table_nav {
   color: #ffffff;
   text-decoration: none;
   float: right;
@@ -107,14 +94,13 @@ font-weight: bold;
   font-size: 14px;
   text-align: center;
   justify-content: center;
-  line-height:50px;
- 
+  line-height: 50px;
 }
-.table_nav:hover{
+.table_nav:hover {
   font-weight: bold;
-  color:#FF8882;
+  color: #ff8882;
 }
-.myBooking_nav{
+.myBooking_nav {
   color: #ffffff;
   text-decoration: none;
   float: right;
@@ -122,14 +108,13 @@ font-weight: bold;
   font-size: 14px;
   text-align: center;
   justify-content: center;
-  line-height:50px;
- 
+  line-height: 50px;
 }
-.myBooking_nav:hover{
+.myBooking_nav:hover {
   font-weight: bold;
-  color:#FF8882;
+  color: #ff8882;
 }
-.home_nav{
+.home_nav {
   color: #ffffff;
   text-decoration: none;
   float: right;
@@ -137,14 +122,13 @@ font-weight: bold;
   font-size: 14px;
   text-align: center;
   justify-content: center;
-  line-height:50px;
- 
+  line-height: 50px;
 }
-.home_nav:hover{
+.home_nav:hover {
   font-weight: bold;
-  color:#FF8882;
+  color: #ff8882;
 }
-.main-nav{
+.main-nav {
   color: #ffffff;
   text-decoration: none;
   float: right;
@@ -152,11 +136,9 @@ font-weight: bold;
   font-size: 14px;
   text-align: center;
   justify-content: center;
-  line-height:50px;
- 
-
+  line-height: 50px;
 }
-.main-nav:hover{
+.main-nav:hover {
   font-weight: bold;
-  color:#FF8882;
-}
+  color: #ff8882;
+} */
