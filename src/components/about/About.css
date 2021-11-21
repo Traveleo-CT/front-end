@@ -36,11 +36,11 @@
   margin-top: 20px;
 }
 
-h1 {
+.title h1 {
   color: #151515;
   margin-bottom: 20px;
 }
-p {
+.content p {
   margin-bottom: 28px;
   font-size: 20px;
   color: #666;
