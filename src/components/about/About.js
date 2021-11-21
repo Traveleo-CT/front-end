@@ -1,55 +1,157 @@
 import React from "react";
-import "./About.css"
-import { GiPlanePilot } from "react-icons/gi";
-const About=()=>{
- return(
-     <div className="About">
-         <div className="part_1">
-         {/* <h1 style={{ fontSize: "20px" }}>
-        <span style={{ color: "rgb(19,145,210)" }}>tre</span>
-        <span style={{ color: "rgb(252,158,21)" }}>val</span>
-        <span style={{ color: "rgb(227,64,61)" }}>eo</span>
-      </h1>
- */}
+import "../about/About.css"
+import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+// import { GiRingingBell } from "react-icons/gi";
+// import { MdOutlineSecurity } from "react-icons/md";
+// import { BsBasketFill } from "react-icons/bs";
+function About() {
+  return (
+    <>
+      <div className="word">
+        <div className="sec title-page">
+          <h2>
+            <span>About Us</span>
+          </h2>
+        </div>
+      </div>
+      <div className="containerq">
+        <section className="about" id="about">
+          <div className="content">
+            <div className="column col-left ">
+              <h3 className="content-title">
+                We Create Intuitive
+                <br /> Booking Websites for Less
+              </h3>
+              <hr />
+              <Link to="/contact">
+                <button className="button">Contact Us</button>
+              </Link>
+            </div>
+            <div className="column col-right">
+              <p>
+              Traveleo is the world’s first inspirational travel search service that focuses on what’s really important: your Interests and your Budget!
 
+How practical is an amazing weekend break for skiing if what you really look forward is relaxing on a sandy beach? How good a great destination can be, if it’s too expensive to get there? Cheapflights offers an innovative and useful online experience, so you can find your perfect destination in just a couple of clicks!
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
 
+      <div className="containerc" style={{ marginTop: "70px" }}>
+        <div className="cont">
+          <div className="title ">
+            <img
+              src="https://uploads-ssl.webflow.com/5e62759ab81ddc4f5815a3b6/5e62759b04473656d2dafba5_question-mark.svg"
+              alt=""
+            />
 
-<h1  style={{ fontSize: "20px" ,textAlign:"center"}}>
-        <span style={{ color: "rgb(19,145,210)" }}>Tre</span>
-        <span style={{ color: "rgb(252,158,21)" }}>val</span>
-        <GiPlanePilot style={{ fontSize: "3vw" }} />
-        <span style={{ color: "rgb(227,64,61)" }}>eo</span>
-        .com™</h1>
-     <p>Founded in 2021 in Jordan, Traveleo.com has grown from a small Dutch startup to one of the world’s leading digital travel companies. Part of Booking Holdings Inc. (NASDAQ: BKNG), Booking.com’s mission is to make it easier for everyone to experience the world.</p>
-     <p>By investing in the technology that helps take the friction out of travel, Booking.com seamlessly connects millions of travellers with memorable experiences, a range of transport options and incredible places to stay - from homes to hotels and much more. As one of the world’s largest travel marketplaces for both established brands and entrepreneurs of all sizes, Booking.com enables properties all over the world to reach a global audience and grow their businesses.</p>
-
-     <p>Booking.com is available in 43 languages and offers more than 28 million total reported accommodation listings, including over 6.2 million listings alone of homes, apartments and other unique places to stay. No matter where you want to go or what you want to do, Booking.com makes it easy and backs it all up with 24/7 customer support.</p>
-     </div>
-     <div className="part_2">
-         <h2 style={{ fontSize: "20px" ,textAlign:"center"}}> What   
-        <span style={{ color: "rgb(19,145,210)" }}>Tre</span>
-        <span style={{ color: "rgb(252,158,21)" }}>val</span>
-        <GiPlanePilot style={{ fontSize: "3vw" }} />
-        <span style={{ color: "rgb(227,64,61)" }}>eo</span>.com offers</h2>
-         <h3>Incredible choice</h3>
-      
-         <p>Whether you want to stay in a chic city apartment, a luxury beach resort or a cosy B&B in the countryside, Booking.com provides you with amazing diversity and breadth of choice - all in one place. </p>
-         <h3>Low rates</h3>
-         <p>Traveleo.com guarantees to offer you the best available rates. And with our promise to price match, you can rest assured that you’re always getting a great deal.</p>
-         <h3>Instant confirmation</h3>
-         <p>At Booking.com, every reservation is instantly confirmed. Once you’ve found your perfect stay, a few clicks are all it takes.</p>
-         <h3>No reservation fees</h3>
-         <p>We don’t charge you any booking fees or add any administrative charges. And in many cases, your booking can be cancelled free of charge.</p>
-         <h3>Secure booking</h3>
-         <p>We facilitate hundreds of thousands of transactions every day through our secure platform, and work to the highest standards to guarantee your privacy. For further details, please check our Privacy Statement.</p>
-         <h3>24/7 support</h3>
-         <p>Whether you’ve just booked or are already enjoying your trip, our customer experience team are on hand around the clock to answer your questions and advocate on your behalf in more than 40 languages. Make sure to check out our FAQ for travellers.</p>
-         <br/>
-         <br/>
-         <br/>
-    </div>
-    
-     </div>
- )
+            <h1 className="section-title">Frequently Asked Questions</h1>
+          </div>
+          <div className="q">
+            <h3
+              style={{
+                marginTop: "70px",
+                fontWeight: "bold",
+                marginBottom: "20px",
+                paddingRight: "9px",
+              }}
+            >
+               {/* //<BsBasketFill />  */}
+               FREE ACCESS 
+            </h3>
+            <p>
+            Unlike some online Booking, we don’t charge any additional fees for placing a bid and we provide our clients with completely free access to all Bookings available on our website.
+            </p>
+            <h3
+              style={{
+                marginTop: "70px",
+                fontWeight: "bold",
+                marginBottom: "20px",
+              }}
+            >
+              {" "}
+              <span>
+                {" "}
+                {/* <MdOutlineSecurity /> */}
+              </span>{" "}
+              100% SECURE BIDS
+            </h3>
+            <p>
+              We guarantee that every bid placed on our website is safe and
+              secure thanks to the SSL technology, which protects all your
+              entered data and actions performed on our website.
+            </p>
+            <h3
+              style={{
+                marginTop: "70px",
+                fontWeight: "bold",
+                marginBottom: "20px",
+              }}
+            >
+              {" "}
+             {/* <GiRingingBell />  */}
+             NEW ITEMS EVERYDAY 
+            </h3>
+            <p>
+            We daily update our catalog of Booking with new offers
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="site-section pt-0">
+        <div className="containerdd">
+          <div className="row">
+            <div className="title">
+              <h2 className="section-title">
+                How <strong>It Works</strong>
+              </h2>
+            </div>
+          </div>
+          <div className="rows">
+            <div className="col-lg-3">
+              <div className="step">
+                <span className="wrap-icon icon-user">01</span>
+                <h3>Register</h3>
+                <p>
+                  To start Booking, you’ll need to register. It’s
+                  completely free!
+                </p>
+              </div>
+            </div>
+            <div className="col-lg-3">
+              <div className="step">
+                <span className="wrap-icon icon-money">02</span>
+                <h3>Select Book</h3>
+                <p>
+                You can instantly book after registration.
+                </p>
+              </div>
+            </div>
+            <div className="col-lg-3">
+              <div className="step">
+                <span className="wrap-icon icon-glass">03</span>
+                <h3>Submit</h3>
+                <p>
+                Submitting a booking is fast and easy. The process takes approximately 5 minutes.
+                </p>
+              </div>
+            </div>
+            <div className="col-lg-3">
+              <div className="step last">
+                <span className="wrap-icon icon-trophy">04</span>
+                <h3>Win</h3>
+                <p>
+                Easily win at Booking and enjoy the travel 
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
 }
-export default About
+
+export default About;

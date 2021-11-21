@@ -4,6 +4,7 @@ import { useHistory, useRouteMatch } from "react-router-dom";
 import axios from "axios";
 import swal from "sweetalert";
 import "./Table.css";
+import moment from "moment";
 
 const columns = [
   {
@@ -18,7 +19,9 @@ const columns = [
   },
   {
     name: "date",
-    selector: (row) => row.date,
+    selector: (row) =>
+      moment(row.date).utcOffset(0, false).format("YYYY-MM-DD HH:mm"),
+
     sortable: true,
   },
   {
@@ -88,7 +91,8 @@ function Table({ value, state, adult, setBook }) {
       }
     };
     return (
-      <div>
+
+      <div className="container">
         <button className="btnn" key="book" onClick={bookHandler}>
           BOOK
         </button>
@@ -96,7 +100,10 @@ function Table({ value, state, adult, setBook }) {
     );
   }, [adult, history, path, selectedRows, setBook, state.token]);
   return (
-    <div>
+    <>
+    <div className="back"></div>
+    <div className="container_table">
+      
       <DataTable
         title="FlightBooking"
         columns={columns}
@@ -110,6 +117,7 @@ function Table({ value, state, adult, setBook }) {
         pointerOnHover
       />
     </div>
+    </>
   );
 }
 export default Table;

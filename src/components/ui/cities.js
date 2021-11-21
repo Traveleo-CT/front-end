@@ -96,11 +96,7 @@ function Cities() {
       image: "https://www.azdo.ly/wp-content/uploads/2020/04/tripoli-libya.jpg",
       caption: "طرابلس ",
     },
-    {
-      image:
-        "https://scontent.ffjr1-4.fna.fbcdn.net/v/t31.18172-8/p720x720/27500851_10156487889558968_6174329973944459914_o.jpg?_nc_cat=107&ccb=1-5&_nc_sid=730e14&_nc_ohc=DL4bHZvaeQkAX-9YAEy&_nc_ht=scontent.ffjr1-4.fna&oh=ce965e9ae0aaac727a25815158048722&oe=6162B106",
-      caption: "الجزائر",
-    },
+
   ];
 
   const captionStyle = {

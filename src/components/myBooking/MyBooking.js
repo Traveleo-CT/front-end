@@ -1,26 +1,39 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./MyBooking.css";
-import  Payment from "../payment/Payment";
+import moment from "moment";
+import Payment from "../payment/payment";
 export const MyBooking = ({ book, state }) => {
   const [adults, setAdults] = useState();
   const [results, setresults] = useState();
   const [myBook, setMyBook] = useState();
-  const click = () => {
-    console.log(state);
 
+  useEffect(() => {
     axios
       .get("http://localhost:5000/flightBooking/allBooking/", {
         headers: { Authorization: `Bearer ${state.token}` },
       })
       .then((result) => {
         setMyBook(result.data);
-        console.log("myBook", myBook);
+        
       })
       .catch((err) => {
         console.log(err);
       });
-  };
+  });
+
+  axios
+    .get("http://localhost:5000/flightBooking/allBooking/", {
+      headers: { Authorization: `Bearer ${state.token}` },
+    })
+    .then((result) => {
+      setMyBook(result.data);
+     
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+
   const deleted = (e) => {
     console.log(e);
     axios
@@ -53,35 +66,37 @@ export const MyBooking = ({ book, state }) => {
         console.log(err);
       });
   };
-  console.log("myBook", myBook);
+
 
   return (
     <div>
-      <button className="btn2" onClick={click}>
-        MyBooking
-      </button>
+       <div className="back"></div>
+       <div className="flight-table">
       {myBook &&
         myBook.flights.map((element) => {
           return (
             <div>
               <div className="card">
-                <div className="image"></div>
+                <div className="image">
+                  <img src="https://i.insider.com/55d38bda2acae7c7018c1153?width=1200&format=jpeg" alt=""/>
+                </div>
                 <div className="text">
-                  <span className="date">Your Book</span>
-                  <h2 className="date">Date:{element.flightId.date}</h2>
+                  <h2 className="date">Date:{ moment(element.flightId.date).utcOffset(0, false).format("YYYY-MM-DD HH:mm")}</h2>
 
                   <h2>Destination: {element.flightId.destination}</h2>
                   <p>Enter The Number Of New Adults</p>
                   <input type="number" onChange={updateAduluts} />
                   <br></br>
                   {results && <p>{results}</p>}
+                  <div>
                   <button className="btn1" onClick={() => updated(element._id)}>
                     Update
                   </button>
                   <button className="btn1" onClick={() => deleted(element._id)}>
                     Delete
                   </button>
-                  <Payment amount={element.flightId.price*element.adults}/>
+                  </div>
+                  <Payment amount={element.flightId.price * element.adults} />
                 </div>
                 <div className="status">
                   <div className="stat">
@@ -90,7 +105,9 @@ export const MyBooking = ({ book, state }) => {
                   </div>
                   <div className="stat">
                     <div className="value">TotalPrice</div>
-                    <div class="type">{element.flightId.price*element.adults}$</div>
+                    <div class="type">
+                      {element.flightId.price * element.adults}$
+                    </div>
                   </div>
                   <div className="stat">
                     <div className="value">Adults</div>
@@ -101,6 +118,7 @@ export const MyBooking = ({ book, state }) => {
             </div>
           );
         })}
+        </div>
     </div>
   );
 };
