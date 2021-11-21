@@ -13,6 +13,15 @@
   position: relative;
   opacity: 0.9;
 }
+#headline{
+  -webkit-filter: drop-shadow(0.125vw 0.125vw 0 #000)
+    drop-shadow(-0.125vw -0.25vw 0 #000);
+  filter: drop-shadow(0.125vw 0.125vw 0#000)
+    drop-shadow(-0.125vw -0.25vw 0 #000);
+   
+  color: rgb(250, 246, 246);
+
+}
 
 .landing .landText {
   width: 100%;

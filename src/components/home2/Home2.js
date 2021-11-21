@@ -9,11 +9,12 @@ function Home2() {
       <div className="landing">
         <div className="landText">
           <p>Increase demand and create excitement for</p>
-          <h1> Your Perfect Tour in France Starts Here!</h1>
+          <h1 id="headline"> Explore memories With Traveleo </h1>
           <button className="button1"><Link style={{
                         textDecoration: "none",
                         color: "black",
                         fontSize: "20px",
+
                       }} to="/about">About</Link></button>
         </div>
       </div>
@@ -206,7 +207,7 @@ function Home2() {
             </div>
             <div className="box">
               <img
-                src="https://images.pexels.com/photos/2886284/pexels-photo-2886284.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                src="https://images.pexels.com/photos/347141/pexels-photo-347141.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
                 alt=""
               />
             </div>
@@ -280,6 +281,11 @@ function Home2() {
             </div>
           </div>
         </div>
+        <div className="welcome"><button><Link style={{
+                        textDecoration: "none",
+                        color: "white",
+                        fontSize: "20px",
+                      }} to="/signUp">Explore Your Trip Now</Link></button></div>
       </div>
     </div>
   );

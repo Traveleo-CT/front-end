@@ -8,13 +8,6 @@ import { Link } from "react-router-dom";
 function About() {
   return (
     <>
-      <div className="word">
-        <div className="sec title-page">
-          <h2>
-            <span>About Us</span>
-          </h2>
-        </div>
-      </div>
       <div className="containerq">
         <section className="about" id="about">
           <div className="content">
