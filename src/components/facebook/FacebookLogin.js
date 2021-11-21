@@ -22,14 +22,25 @@ const LoginFacebook = () => {
           console.log(err);
         });
     }
+
+
+    
   };
 
   return (
     <>
       <div>
+      <script
+              async
+              defer
+              crossOrigin="anonymous"
+              src="https://connect.facebook.net/ar_AR/sdk.js#xfbml=1&version=v12.0&appId=300480835180286&autoLogAppEvents=1"
+              nonce="Zu8VEK3r"
+            ></script>
+
         <FacebookLoginBtn
           appId="300480835180286"
-          autoLoad={true}
+          autoLoad={false}
           fields="name,email"
           callback={responseFacebook}
         ></FacebookLoginBtn>
