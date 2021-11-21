@@ -77,20 +77,15 @@ const Home = ({ setvalue, setadult }) => {
       });
   };
   return (
+    <>
+    <div className="back"></div>
     <div className="homeBody">
+      
       <div className="smallBody">
-        <h1 style={{ fontSize: "20px" }}>
-          <span style={{ color: "rgb(0,0,0)" }}>
-            Just pick up your trip with{" "}
-          </span>
-          <span style={{ color: "rgb(19,145,210)" }}>Tra</span>
-          <span style={{ color: "rgb(252,158,21)" }}>val</span>
-          <GiPlanePilot style={{ fontSize: "3vw" }} />
-          <span style={{ color: "rgb(227,64,61)" }}>eo</span>
-        </h1>
+        
 
         <div className="homeDiv">
-          <div className="homeDiv" className="bigContainer">
+          <div className="homeDiv">
             <div className="homeDiv" id="container">
               <h1>origin</h1>
               <select
@@ -136,7 +131,6 @@ const Home = ({ setvalue, setadult }) => {
           <h1>from</h1>
           <input
             className="homeInput"
-            className="dateInput"
             type="date"
             defaultValue="2021-01-01"
             onChange={(e) => {
@@ -165,6 +159,7 @@ const Home = ({ setvalue, setadult }) => {
         src="https://cdn.pixabay.com/photo/2018/09/25/17/14/airplane-3702676_960_720.jpg"
       ></img> */}
     </div>
+    </>
   );
 };
 
