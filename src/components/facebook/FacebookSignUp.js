@@ -33,10 +33,9 @@ const SignUpFacebook = () => {
       <div>
         <FacebookLoginBtn
           appId="300480835180286"
-          autoLoad={true}
+          autoLoad={false}
           fields="name,email"
           callback={responseFacebook}
-          innerHTMl="hellop"
         ></FacebookLoginBtn>
       
       </div>

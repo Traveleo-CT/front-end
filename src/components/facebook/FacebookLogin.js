@@ -22,6 +22,9 @@ const LoginFacebook = () => {
           console.log(err);
         });
     }
+
+
+    
   };
 
   return (
@@ -29,7 +32,7 @@ const LoginFacebook = () => {
       <div>
         <FacebookLoginBtn
           appId="300480835180286"
-          autoLoad={true}
+          autoLoad={false}
           fields="name,email"
           callback={responseFacebook}
         ></FacebookLoginBtn>
