@@ -12,7 +12,7 @@ import Attractions from "../src/components/ui/attractions";
 import Cities from "../src/components/ui/cities";
 import Footer from "../src/components/footer/footer";
 import { UpdateFlightBooking } from "./components/updateFlightBooking/UpdateFlightBooking";
-import Contact from "./components/contact/Contact";
+// import Contact from "./components/contact/Contact";
 import SideBar from "./components/sidebar";
 import { MyBooking } from "./components/myBooking/MyBooking";
 
@@ -62,13 +62,13 @@ const App = () => {
 
               <Route path={`/logout`} component={logOut} />
             </userSign.Provider>
-
-            <Route path={`/contact`} component={Contact} />
+            {/* <Route path={`/contact`} component={Contact} /> */}
             <Route path={`/about`} component={About} />
             <Route
               path={`/home`}
               render={() => <Home setvalue={setflights} setadult={setAdult} />}
             />
+            
             <Route
               path={`/Table`}
               render={() => (
