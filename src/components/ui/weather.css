@@ -1,23 +1,22 @@
 .weather_div {
-  padding: 10px;
+  padding: 50px;
 
-  position: absolute;
+  /* position: absolute; */
   top: 270vh;
   right: 0px;
   overflow: hidden;
-  height: 65vh;
+  /* font-size: .5rem; */
   font-size: 40%;
   font: bold !important;
   color: aliceblue;
-  width: 20%;
-  margin:0 80px 0 0;
+  width: 30%;
+  margin: 5%;
   border-radius: 10px;
   font-family: Arial, Helvetica, sans-serif !important;
   background-image: url("https://cdn.pixabay.com/photo/2015/03/26/09/47/sky-690293_960_720.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  
-  
+  /* margin:0 80px 0 0; */
 }
 .weather_select:hover {
   cursor: pointer;
@@ -28,11 +27,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height:40vh;
+  height: 50vh;
 }
 
-
-.weather_div p{
+.weather_div p {
   font-size: 1rem;
 }
 .weather_select {
@@ -44,7 +42,8 @@
   border-radius: 5px;
   text-align: center;
   background-color: rgba(200, 213, 223, 0.534);
-  text-indent: 20px;
+  margin-top: 1vh;
+  text-indent: 1.5rem;
 }
 
 .weather_select option {

@@ -1,22 +1,37 @@
 .card {
-  width: 37.5vw;
-  display: grid;
-  grid-template-columns: 80vh;
-  grid-template-rows: 25vw 22vw 5vw;
+  margin: 30px;
+  text-align: center;
+  /* width: 37.5vw;
+  
   grid-template-areas: "image" "text" "stats";
   border-radius: 15px;
   background: white;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
-  margin: auto !important;
+  margin: auto !important; */
+
+
 }
-.image {
-  grid-area: image;
-  background: url("https://c8.alamy.com/comp/M1AT1E/a-woman-booking-flight-online-using-laptop-M1AT1E.jpg");
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+.flight-table{
+  display: grid;
+  grid-template-columns: 40vw 40vw;
+  width: 80%;
+  margin: auto;
+  margin-top: 100px;
+}
+.back{
+  background-image: url("https://cdn.galaxy.tf/thumb/sizeW1920/uploads/2s/cms_image/001/529/056/1529056419_5b238ca30c2b1.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
+  height: 300px;
+  margin: 0;
+  position: relative;
+  opacity: 0.9;
+}
+.image img {
+  max-width: 100%;
+ 
 }
 .text {
   grid-area: text;
@@ -33,12 +48,12 @@
   font-weight: 300;
 }
 .btn1 {
-  margin-top: 35px;
+  margin: 30px 10px;
   width: 100px;
-  height: 30px;
   background-color: rgb(2, 36, 59);
   border-radius: 5px;
   color: #f7f7f7;
+  padding: 14px;
 }
 .btn2{
   
@@ -68,15 +83,8 @@
   color: white;
   padding: 10px;
 }
-.card:hover {
-  transform: scale(1.15);
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
-}
-.card {
-  transition: 0.5s ease;
-  cursor: pointer;
-  margin: 30px;
-}
+
+
 .type {
   font-size: 30px;
 }

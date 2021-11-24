@@ -64,7 +64,7 @@ function Weather() {
       <h1 style={{ fontSize: "20px" }}>
         <span style={{ color: "rgb(19,145,210)" }}>Tre</span>
         <span style={{ color: "rgb(252,158,21)" }}>val</span>
-        <GiPlanePilot style={{ fontSize: "3vw" }} />
+        {/* <GiPlanePilot style={{ fontSize: "3vw" }} /> */}
         <span style={{ color: "rgb(227,64,61)" }}>eo</span>
       </h1>
 
@@ -77,7 +77,10 @@ function Weather() {
         })}
       </select>
       <div className="weather_details">
-        <p style={{ color: "black" }}>
+        <p
+          style={{ marginTop: "15vh" }}
+          style={{ color: "black", fontSize: "20px" }}
+        >
           {name} <FaMapPin />
         </p>
         <h1 style={{ color: "black" }}>{description}</h1>

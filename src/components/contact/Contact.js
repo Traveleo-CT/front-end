@@ -53,17 +53,18 @@ function Contact() {
             >
               <input
                 type="text"
+                name="to_name" 
                 placeholder="YOUR NAME"
                 onChange={(e) => {
                   setUserName(e.target.value);
                 }}
                 value={userName}
                 required
-                name="name"
+               
               />
               <input
                 type="email"
-                name="email"
+                name="from_name"
                 ref={refName}
                 value={email}
                 onChange={(e) => {

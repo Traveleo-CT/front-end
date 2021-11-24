@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useHistory, useRouteMatch } from "react-router-dom";
 import axios from "axios";
 import "./Home.css";
-import { GiPlanePilot, GiWhiteBook } from "react-icons/gi";
 
 const Home = ({ setvalue, setadult }) => {
   const destenations = [
@@ -38,14 +37,6 @@ const Home = ({ setvalue, setadult }) => {
   };
 
   const click = () => {
-    // console.log("hello", {
-    //   origin: converter[origin],
-    //   destination: converter[destination],
-    //   dateFrom,
-    //   adults,
-    //   dateTo,
-    // });
-
     axios
       .post("http://localhost:5000/flights/search/", {
         origin: converter[origin],
@@ -77,94 +68,85 @@ const Home = ({ setvalue, setadult }) => {
       });
   };
   return (
-    <div className="homeBody">
-      <div className="smallBody">
-        <h1 style={{ fontSize: "20px" }}>
-          <span style={{ color: "rgb(0,0,0)" }}>
-            Just pick up your trip with{" "}
-          </span>
-          <span style={{ color: "rgb(19,145,210)" }}>Tra</span>
-          <span style={{ color: "rgb(252,158,21)" }}>val</span>
-          <GiPlanePilot style={{ fontSize: "3vw" }} />
-          <span style={{ color: "rgb(227,64,61)" }}>eo</span>
-        </h1>
+    <>
+      <div className="back"></div>
+      <div className="homeBody">
+        <div className="smallBody">
+          <div className="homeDiv">
+            <div className="homeDiv">
+              <div className="homeDiv" id="container">
+                <h1>origin</h1>
+                <select
+                  className="homeSelect"
+                  id="origin"
+                  name="origin"
+                  onChange={(r) => {
+                    setOrigin(r.target.value);
+                  }}
+                  required
+                >
+                  {origins.map((item) => {
+                    return <option value={item}>{item}</option>;
+                  })}
+                </select>
+              </div>
+              <div className="homeDiv" id="container">
+                <h1>Destination</h1>
+                <select
+                  className="homeSelect"
+                  id="destination"
+                  name="destination"
+                  onChange={(r) => {
+                    setDestination(r.target.value);
+                  }}
+                  required
+                >
+                  {destenations.map((item) => {
+                    return <option value={item}>{item}</option>;
+                  })}
+                </select>
+              </div>
+            </div>
+            <h1>Adults</h1>
+            <input
+              className="homeInput"
+              type="number"
+              defaultValue={1}
+              onChange={(w) => {
+                setAdults(w.target.value);
+              }}
+            />
+            <h1 style={{marginTop:"5vh"}}>from</h1>
+            <input
+              className="dateInput"
+              type="date"
+              defaultValue="2021-01-01"
+              onChange={(e) => {
+                setDateFrom(e.target.value);
+              }}
+            />
+            <h1 style={{marginTop:"5vh"}}>to</h1>
+            <input
+              className="dateInput"
 
-        <div className="homeDiv">
-          <div className="homeDiv" className="bigContainer">
-            <div className="homeDiv" id="container">
-              <h1>origin</h1>
-              <select
-                className="homeSelect"
-                id="origin"
-                name="origin"
-                onChange={(r) => {
-                  setOrigin(r.target.value);
-                }}
-                required
-              >
-                {origins.map((item) => {
-                  return <option value={item}>{item}</option>;
-                })}
-              </select>
-            </div>
-            <div className="homeDiv" id="container">
-              <h1>Destination</h1>
-              <select
-                className="homeSelect"
-                id="destination"
-                name="destination"
-                onChange={(r) => {
-                  setDestination(r.target.value);
-                }}
-                required
-              >
-                {destenations.map((item) => {
-                  return <option value={item}>{item}</option>;
-                })}
-              </select>
-            </div>
+              defaultValue="2021-12-31"
+              type="date"
+              onChange={(e) => {
+                setDateTo(e.target.value);
+              }}
+            />
+            <button className="homeButton" onClick={click}>
+              Search
+            </button>
           </div>
-          <h1>Adults</h1>
-          <input
-            className="homeInput"
-            type="number"
-            defaultValue={1}
-            onChange={(w) => {
-              setAdults(w.target.value);
-            }}
-          />
-          <h1>from</h1>
-          <input
-            className="homeInput"
-            className="dateInput"
-            type="date"
-            defaultValue="2021-01-01"
-            onChange={(e) => {
-              console.log(e.target.value);
-
-              setDateFrom(e.target.value);
-            }}
-          />
-          <h1>to</h1>
-          <input
-            className="dateInput"
-            defaultValue="2021-12-31"
-            type="date"
-            onChange={(e) => {
-              setDateTo(e.target.value);
-            }}
-          />
-          <button className="homeButton" onClick={click}>
-            Search
-          </button>
         </div>
-      </div>
 
-      {/* <img
+        {/* <img
         className="backImg"
         src="https://cdn.pixabay.com/photo/2018/09/25/17/14/airplane-3702676_960_720.jpg"
       ></img> */}
-    </div>
+      </div>
+    </>
   );
 };
 

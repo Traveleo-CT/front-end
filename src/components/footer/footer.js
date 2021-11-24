@@ -1,71 +1,62 @@
 import React from "react";
 import "./footer.css";
-import { GiPlanePilot } from "react-icons/gi";
-import { Link, useRouteMatch } from "react-router-dom";
-
-import {
-  faFacebookF,
-  faTwitterSquare,
-  faLinkedin,
-  faInstagram,
-  faYoutubeSquare,
-} from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { GrFacebookOption, GrTwitter, GrLinkedin } from "react-icons/gr";
+import { FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
-  let { path, url } = useRouteMatch();
-
   return (
-    <div className="footer_div">
-      <div className="footer_icons">
-        <FontAwesomeIcon style={{ fontSize: "3vw" }} icon={faFacebookF} />
-        <FontAwesomeIcon style={{ fontSize: "3vw" }} icon={faTwitterSquare} />
-        <FontAwesomeIcon style={{ fontSize: "3vw" }} icon={faLinkedin} />
-        <FontAwesomeIcon style={{ fontSize: "3vw" }} icon={faInstagram} />
-        <FontAwesomeIcon style={{ fontSize: "3vw" }} icon={faYoutubeSquare} />
+    <div class="footer">
+    <div class="container">
+      <div class="row-footer">
+        <div class="col-footer">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="">About us</a></li>
+            <li><a href="">our services</a></li>
+            <li><a href="">privacy policy</a></li>
+            <li><a href="">affiliate program</a></li>
+          </ul>
+        </div>
+        <div class="col-footer">
+          <h4>get help</h4>
+          <ul>
+            <li><a href="">FAQ</a></li>
+            <li><a href="">shipping</a></li>
+            <li><a href="">Returns</a></li>
+            <li><a href="">Payment options</a></li>
+          </ul>
+        </div>
+        <div class="col-footer">
+          <h4>online shop</h4>
+          <ul>
+            <li><a href="">product</a></li>
+            <li><a href="">product</a></li>
+            <li><a href="">product</a></li>
+            <li><a href="">product</a></li>
+          </ul>
+        </div>
+        <div class="col-footer">
+          <h4>Follow us</h4>
+          <div class="social">
+          <div className="social">
+                <a href="https://www.facebook.com/">
+                  <GrFacebookOption />
+                </a>
+                <a href="https://www.instagram.com/">
+                  <FaInstagram />
+                </a>
+                <a href="https://twitter.com/">
+                  <GrTwitter />
+                </a>
+                <a href="https://www.linkedin.com/">
+                  <GrLinkedin />
+                </a>
+              </div>
+          </div>
+        </div>
       </div>
-      <br />
-      <br />
-      <div className="footer_links">
-        <ul>
-          <li>
-            <Link to={`/contact`}>Contact Us</Link>
-          </li>
-          <li>
-            <a href="#">Jobs</a>
-          </li>
-          <li>
-            <a href="#">Site Map</a>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <a>Trevaleo Business Studio</a>
-          </li>
-          <a>Trevaleo Magazine</a>
-          <li></li>
-        </ul>
-        <ul>
-          <li>
-            <a>Help</a>
-          </li>
-          <li>
-            <a>Terms and conditions</a>
-          </li>
-
-          <li>
-            <a>Legal information</a>
-          </li>
-        </ul>
-      </div>
-      <h1 style={{ fontSize: "20px" }}>
-        <span style={{ color: "rgb(19,145,210)" }}>Tre</span>
-        <span style={{ color: "rgb(252,158,21)" }}>val</span>
-        <GiPlanePilot style={{ fontSize: "3vw" }} />
-        <span style={{ color: "rgb(227,64,61)" }}>eo</span>
-      </h1>
-      <h6>Copyright 2021 trevaleo | All rights reserved.</h6>
     </div>
+  </div>
   );
 };
 
