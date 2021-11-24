@@ -17,7 +17,6 @@ const Login = () => {
   const newUser = useContext(userContext);
   const [err, setErr] = useState();
 
-
   return (
     <div className="main_login">
       <div className="back_div"></div>
@@ -98,6 +97,7 @@ const Login = () => {
           src="https://connect.facebook.net/ar_AR/sdk.js#xfbml=1&version=v12.0&appId=300480835180286&autoLogAppEvents=1"
           nonce="Zu8VEK3r"
         ></script>
+
         <LoginFacebook />
         {err}
       </div>

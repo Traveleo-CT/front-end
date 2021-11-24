@@ -6,8 +6,7 @@ import { userSign } from "../../App";
 import { GiPlanePilot } from "react-icons/gi";
 import { useHistory } from "react-router-dom";
 import { CgCloseR } from "react-icons/cg";
-import SignUpFacebook from "../facebook/FacebookSignUp"
-
+import SignUpFacebook from "../facebook/FacebookSignUp";
 
 const SignUp = () => {
   const history = useHistory();
@@ -126,13 +125,17 @@ const SignUp = () => {
             >
               signUp
             </button>
-            <SignUpFacebook/>
+            <script
+              async
+              defer
+              crossOrigin="anonymous"
+              src="https://connect.facebook.net/ar_AR/sdk.js#xfbml=1&version=v12.0&appId=300480835180286&autoLogAppEvents=1"
+              nonce="Zu8VEK3r"
+            ></script>
+            <SignUpFacebook />
             {status}
           </div>
           <br />
-        
-         
-
         </div>
       ) : (
         <Modal />

@@ -16,17 +16,17 @@ const Payment=({amount})=>{
     useEffect(() => {
       const makeRequest = async () => {
         try {
-          const res = await axios.post(`http://localhost:5000/payment`, {
+           const res = await axios.post(`http://localhost:5000/payment`, {
             tokenId: stripeToken.id,
             amount: (amount),
           });
-          // history.push("/success", { data: res.data });
-          setMessage("Success payment")
+        
+            setMessage("Success payment")
           swal(
             "Thank You!",
             "When your reservation is confirmed you will be notified by SMS."
           );
-          console.log("///////",res.data)
+        
         } catch(err) {
           console.log("payment err",err)
         }
@@ -39,7 +39,7 @@ const Payment=({amount})=>{
       <>
       <StripeCheckout 
               name="Auto Rental"
-            //   image=""
+         
               billingAddress
               shippingAddress
               description="description"
