@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { GiChestnutLeaf } from "react-icons/gi";
 import { userContext } from "../../App";
-import "../navigation/Navigation.css";
+import "./Navigation.css";
 import { Link, useRouteMatch } from "react-router-dom";
 function Navigation1() {
   const user = useContext(userContext);
