@@ -6,7 +6,7 @@ const SignUpFacebook = () => {
   const responseFacebook = (response) => {
     if (response.status !== "unknown") {
       axios
-        .post("http://localhost:5000/signup", {
+        .post("https://traveleo-server.herokuapp.com/signup", {
           email: response.email,
           password: response.name + 123,
           firstName: response.name.split(" ")[0],
@@ -27,7 +27,6 @@ const SignUpFacebook = () => {
         });
     }
   };
-
   return (
     <>
       <div>

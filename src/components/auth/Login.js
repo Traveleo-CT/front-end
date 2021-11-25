@@ -22,7 +22,7 @@ const Login = () => {
           src="https://soychef.es/wp-content/uploads/2016/11/user-1.png"
           alt=""
         />
-        <h1>Login Form</h1>
+        <h1>Login</h1>
 
         <div class="container-register">
           <input
@@ -49,7 +49,7 @@ const Login = () => {
             <button
               onClick={() => {
                 axios
-                  .post("http://localhost:5000/login", { email, password })
+                  .post("https://traveleo-server.herokuapp.com/login", { email, password })
                   .then((result) => {
                     if (!result.data.token) {
                       setErr(result.data);
@@ -77,7 +77,8 @@ const Login = () => {
               nonce="Zu8VEK3r"
             ></script>
             <LoginFacebook />
-            {err}
+            <h4 style={{color:"white"}}>  {err}</h4>
+           
           </div>
         </div>
       </div>

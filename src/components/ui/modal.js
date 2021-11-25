@@ -20,5 +20,4 @@ function Modal(props) {
     </div>
   );
 }
-//new
 export default Modal;
