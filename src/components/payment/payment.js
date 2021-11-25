@@ -6,10 +6,8 @@ import swal from "sweetalert";
 const Payment = ({ amount }) => {
   const [stripeToken, setStripeToken] = useState(null);
   const [message, setMessage] = useState("");
-
   const KEY =
     "pk_test_51JmGKeKbP3md6iwKmNhMpoMdThc8BgleFnUw0cI1n1eGKCkRgOPHBSGDFuVBzXVaAMlsmVi8CqNaqOejDjtcBefj00iwrv2rao";
-
   const onToken = (token) => {
     setStripeToken(token);
   };
@@ -58,7 +56,6 @@ const Payment = ({ amount }) => {
           CHECKOUT NOW
         </Button>
       </StripeCheckout>
-
       <p>{message}</p>
     </>
   );
