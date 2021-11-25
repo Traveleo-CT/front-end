@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import axios from "axios";
 import "../auth/SignUp.css";
-import Modal from "../modal/Modal";
+import Modal from "../Modal/Modal";
 import { userSign } from "../../App";
 import { GiPlanePilot } from "react-icons/gi";
 import { useHistory } from "react-router-dom";
