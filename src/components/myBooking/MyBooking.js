@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./MyBooking.css";
 import moment from "moment";
-import Payment from "../payment/payment";
+import Payment from "../payment/Payment";
 export const MyBooking = ({ book, state }) => {
   const [adults, setAdults] = useState();
   const [results, setresults] = useState();
