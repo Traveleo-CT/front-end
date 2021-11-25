@@ -1,5 +1,5 @@
 import React, { useState, createContext } from "react";
-import Home from "./components/home/Home";
+import Home from "./components/home/home";
 import Table from "./components/ui/table";
 import Login from "./components/auth/Login";
 import SignUp from "./components/auth/SignUp";
