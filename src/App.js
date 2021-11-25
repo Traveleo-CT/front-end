@@ -53,7 +53,6 @@ const App = () => {
 
           <Route path={`/contact`} component={Contact} />
           <Route path={`/about`} component={About} />
-          <Route path={`/home`} component={Home} />
           <Route
             path={`/Table`}
             render={() => (
