@@ -1,5 +1,5 @@
 import React, { useState, createContext } from "react";
-import Home from "./components/home/Home";
+import Home from "./components/home/home";
 import Table from "./components/ui/table";
 import Login from "./components/auth/Login";
 import SignUp from "./components/auth/SignUp";
@@ -53,6 +53,7 @@ const App = () => {
 
           <Route path={`/contact`} component={Contact} />
           <Route path={`/about`} component={About} />
+          <Route path={`/home`} component={Home} />
           <Route
             path={`/Table`}
             render={() => (
