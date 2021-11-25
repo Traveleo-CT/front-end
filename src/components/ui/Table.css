@@ -14,7 +14,7 @@
 .App {
   text-align: start !important;
 }
-.container_table{
+.container_table {
   margin: auto;
   margin-top: 50px;
   width: 80%;
@@ -66,7 +66,6 @@
   -ms-flex-align: stretch;
   align-items: stretch;
   width: 100%;
-
 }
 .iiHmzE {
   display: flex;
@@ -118,7 +117,7 @@
   background-color: #ffffff;
   min-height: 48px;
 }
-.back{
+.back {
   background-image: url("https://cdn.galaxy.tf/thumb/sizeW1920/uploads/2s/cms_image/001/529/056/1529056419_5b238ca30c2b1.jpg");
   background-size: cover;
   background-repeat: no-repeat;

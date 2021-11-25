@@ -53,7 +53,6 @@ function Table({ value, state, adult, setBook }) {
           text: `you want to book on:\r ${selectedRows.map(
             (r) => r.destination
           )}?`,
-          // eslint-disable-next-line no-dupe-keys
 
           icon: "warning",
 
@@ -65,7 +64,7 @@ function Table({ value, state, adult, setBook }) {
 
             axios
               .post(
-                "http://localhost:5000/flightBooking/",
+                "https://traveleo-server.herokuapp.com/flightBooking/",
                 {
                   flightId: selectedRows[0].bookingId,
                   adults: adult,
@@ -91,7 +90,6 @@ function Table({ value, state, adult, setBook }) {
       }
     };
     return (
-
       <div className="container">
         <button className="btnn" key="book" onClick={bookHandler}>
           BOOK
@@ -101,22 +99,21 @@ function Table({ value, state, adult, setBook }) {
   }, [adult, history, path, selectedRows, setBook, state.token]);
   return (
     <>
-    <div className="back"></div>
-    <div className="container_table">
-      
-      <DataTable
-        title="FlightBooking"
-        columns={columns}
-        data={flight}
-        selectableRows
-        pagination
-        selectableRowsHighlight
-        selectableRowsSingle
-        contextActions={contextActions}
-        onSelectedRowsChange={handleRowSelected}
-        pointerOnHover
-      />
-    </div>
+      <div className="back"></div>
+      <div className="container_table">
+        <DataTable
+          title="FlightBooking"
+          columns={columns}
+          data={flight}
+          selectableRows
+          pagination
+          selectableRowsHighlight
+          selectableRowsSingle
+          contextActions={contextActions}
+          onSelectedRowsChange={handleRowSelected}
+          pointerOnHover
+        />
+      </div>
     </>
   );
 }
